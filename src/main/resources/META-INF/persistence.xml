@@ -4,6 +4,7 @@
     <persistence-unit name="wfdsPU" transaction-type="JTA">
 	<jta-data-source>java:comp/env/jdbc/MyDS</jta-data-source>
 	<properties>
+		<property name="wildfly.jpa.twophasebootstrap" value="false"/>
 		<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
 		<property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
 	</properties>
